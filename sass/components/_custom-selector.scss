@@ -1,0 +1,65 @@
+.select {
+  position: relative;
+  width: 250px;
+
+  &__input {
+    padding: 12px 14px;
+    width: 100%;
+    background-color: $white-color;
+    border: none;
+    border: 2px solid $white-color;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+    outline: none;
+    cursor: pointer;
+
+    &:focus {
+      border-color: $accent-color;
+    }
+
+    &::placeholder {
+      color: $grey-color;
+    }
+
+    &::selection {
+      background-color: $white-color;
+    }
+  }
+}
+
+.options {
+  position: absolute;
+  top: 130%;
+  left: 0;
+  width: 100%;
+  background-color: $white-color;
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+
+  &__item {
+    padding: 14px 14px;
+    transition-property: background, color;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: $white-color;
+      background-color: $accent-color;
+    }
+  }
+}
+
+.arrow-down {
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translateY(-50%);
+  transition: transform 200ms ease-in-out;
+  color: $grey-color;
+  pointer-events: none;
+
+  &.rotate {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
