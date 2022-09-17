@@ -13,6 +13,34 @@
   </head>
   <body>
     <header></header>
-    <main></main>
+    <main>
+      <div class="container">
+        <section>
+          <h2>Custom select</h2>
+
+          <div class="select">
+            <input
+              class="select__input"
+              type="text"
+              placeholder="Pick a color"
+              readonly
+            />
+
+            <svg class="arrow-down" width="28" height="28">
+              <use href="./images/icons.svg#arrow-down"></use>
+            </svg>
+
+            <ul class="options visually-hidden">
+              <li name="Blue" class="options__item">Blue</li>
+              <li name="Green" class="options__item">Green</li>
+              <li name="Yellow" class="options__item">Yellow</li>
+              <li name="Orange" class="options__item">Orange</li>
+              <li name="Red" class="options__item">Red</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="./js/customSelector.js"></script>
   </body>
 </html>
