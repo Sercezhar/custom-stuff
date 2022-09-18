@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header></header>
     <main>
       <div class="container">
         <section>
@@ -37,6 +36,66 @@
               <li name="Orange" class="options__item">Orange</li>
               <li name="Red" class="options__item">Red</li>
             </ul>
+          </div>
+        </section>
+
+        <hr />
+
+        <section>
+          <h2>Custom checkboxes</h2>
+
+          <div class="common">
+            <h3>Common checkbox</h3>
+
+            <label class="check">
+              <input class="check__input visually-hidden" type="checkbox" />
+              <span class="check__box"></span>
+              Unchecked
+            </label>
+
+            <label class="check">
+              <input
+                class="check__input visually-hidden"
+                type="checkbox"
+                checked
+              />
+              <span class="check__box"></span>
+              Checked
+            </label>
+
+            <label class="check">
+              <input
+                class="check__input visually-hidden"
+                type="checkbox"
+                disabled
+              />
+              <span class="check__box"></span>
+              Disabled
+            </label>
+
+            <label class="check">
+              <input
+                class="check__input visually-hidden"
+                type="checkbox"
+                checked
+                disabled
+              />
+              <span class="check__box"></span>
+              Checked & Disabled
+            </label>
+          </div>
+
+          <div>
+            <h3>Toggle switch</h3>
+
+            <input
+              class="toggle__input visually-hidden"
+              id="switch"
+              type="checkbox"
+            />
+            <label class="toggle" for="switch">
+              <span class="toggle__ball"></span>
+            </label>
           </div>
         </section>
       </div>

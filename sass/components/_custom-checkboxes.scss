@@ -1,0 +1,76 @@
+.common {
+  margin-bottom: 20px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  &__input:checked + &__box {
+    border-color: $accent-color;
+    background-color: $accent-color;
+    background-image: url("../../images/check-icon.svg");
+    background-size: contain;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+  }
+
+  &__input:focus + &__box {
+    box-shadow: 0 0 0 2px $green-color;
+  }
+
+  &__input:disabled + &__box {
+    border-color: $grey-color;
+  }
+
+  &__input:checked:disabled + &__box {
+    background-color: $grey-color;
+  }
+
+  &__box {
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    background-color: $white-color;
+    border: 2px solid $black-color;
+    border-radius: 3px;
+    transition-property: background, border-color;
+    transition: 200ms ease-in-out;
+  }
+}
+
+.toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5px;
+  height: 28px;
+  width: 52px;
+  background-color: $grey-color;
+  border-radius: 50px;
+  box-shadow: $box-shadow;
+  transition: background 200ms ease-in-out;
+  cursor: pointer;
+
+  &__input:checked + & &__ball {
+    transform: translateX(22px);
+  }
+
+  &__input:checked + & {
+    background-color: $accent-color;
+  }
+
+  &__ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: $white-color;
+    border-radius: 50%;
+    transition: transform 200ms ease-in-out;
+  }
+}
