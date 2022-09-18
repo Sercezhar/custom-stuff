@@ -13,7 +13,7 @@
   &__input:checked + &__box {
     border-color: $accent-color;
     background-color: $accent-color;
-    background-image: url("/images/check-icon.svg");
+    background-image: url("../images/check-icon.svg");
     background-size: contain;
     background-origin: content-box;
     background-repeat: no-repeat;
