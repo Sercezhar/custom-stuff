@@ -230,4 +230,43 @@ hr {
   transition: -webkit-transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 2px;
+  background-color: #fff;
+  border: 2px solid #00a7e1;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+          box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  cursor: pointer;
+}
+.hamburger[aria-expanded=true] .line {
+  -webkit-transition: y 200ms ease-in, rotate 200ms ease-in 200ms, opacity 0ms 200ms;
+  transition: y 200ms ease-in, rotate 200ms ease-in 200ms, opacity 0ms 200ms;
+}
+.hamburger[aria-expanded=true] :is(.hamburger__icon--top, .hamburger__icon--bottom) {
+  y: 45;
+}
+.hamburger[aria-expanded=true] .hamburger__icon--top {
+  rotate: -45deg;
+}
+.hamburger[aria-expanded=true] .hamburger__icon--middle {
+  opacity: 0;
+}
+.hamburger[aria-expanded=true] .hamburger__icon--bottom {
+  rotate: 45deg;
+}
+.hamburger__icon {
+  fill: #00a7e1;
+}
+
+.line {
+  -webkit-transition: y 200ms ease-in 200ms, rotate 200ms ease-in, opacity 0ms 200ms;
+  transition: y 200ms ease-in 200ms, rotate 200ms ease-in, opacity 0ms 200ms;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }/*# sourceMappingURL=main.css.map */
