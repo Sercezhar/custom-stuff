@@ -1,0 +1,38 @@
+.hamburger {
+  display: flex;
+  padding: 0 2px;
+  background-color: #fff;
+  border: 2px solid $accent-color;
+  border-radius: 0.3rem;
+  box-shadow: $box-shadow;
+  cursor: pointer;
+
+  &[aria-expanded="true"] .line {
+    transition: y 200ms ease-in, rotate 200ms ease-in 200ms, opacity 0ms 200ms;
+  }
+
+  &[aria-expanded="true"] :is(&__icon--top, &__icon--bottom) {
+    y: 45;
+  }
+
+  &[aria-expanded="true"] &__icon--top {
+    rotate: -45deg;
+  }
+
+  &[aria-expanded="true"] &__icon--middle {
+    opacity: 0;
+  }
+
+  &[aria-expanded="true"] &__icon--bottom {
+    rotate: 45deg;
+  }
+
+  &__icon {
+    fill: $accent-color;
+  }
+}
+
+.line {
+  transition: y 200ms ease-in 200ms, rotate 200ms ease-in, opacity 0ms 200ms;
+  transform-origin: center;
+}
